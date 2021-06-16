@@ -1,25 +1,31 @@
 import React from "react";
-import classnames from "classnames";
+import classNames from "classnames";
 
 import "components/DayListItem.scss";
 
-export default function DayListItem(props) {
+function DayListItem(props) {
 
-  const formatSpots = function(spaces) {
-    if(spaces === 0) {
-      return `no spots remaining`
-    } else if (spaces === 1) {
-      return "1 spot remaining"
-    } 
-    return `${spaces} spots remaining`
+  const formatSpots = function(spots) {
+    if (spots === 0) {
+      return "No spots remaining";
+    }
+    if (spots === 1) {
+      return "1 spot remaining";
+    }
+    return `${spots} spots remaining`;
   }
-  const ListItemClass = classnames("day-list__item", {
-  "day-list__item--selected": props.selected,
-  "day-list__item--full": props.spots === 0});
+
+  const dayClassName = classNames("day-list__item", {
+    "day-list__item--selected": props.selected,
+    "day-list__item--full": props.spots === 0
+  });
+
   return (
-    <li className={ListItemClass} onClick={() => props.setDay(props.name)}>
-      <h2 className="text--regular">{props.name}</h2>
-      <h3 className="text--light">{formatSpots(props.spots)}</h3>
+    <li className={dayClassName} onClick={() => props.setDay(props.name)} data-testid="day">
+      <h2 >{props.name}</h2> 
+      <h3 >{formatSpots(props.spots)}</h3>
     </li>
   );
 }
+
+export default DayListItem
