@@ -45,19 +45,19 @@ The Page Displays:
 
 Install dependencies with `npm install`.
 
-## Running Webpack Development Server
+## Running the Webpack Development Server
 
 ```sh
 npm start
 ```
 
-## Running Jest Test Framework
+## Running the Jest Test Framework
 
 ```sh
 npm test
 ```
 
-## Running Storybook Visual Testbed
+## Running the Storybook Visual Testbed
 
 ```sh
 npm run storybook
