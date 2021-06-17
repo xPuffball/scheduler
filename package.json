@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/node": "^15.12.1",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "normalize.css": "^8.0.1",
@@ -42,7 +43,9 @@
     "@testing-library/react": "^8.0.7",
     "@testing-library/react-hooks": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.0",
+    "prop-types": "^15.7.2",
+    "react-test-renderer": "^16.9.0"
   },
   "jest": {
     "watchPathIgnorePatterns": [

@@ -8,7 +8,7 @@ function Form(props) {
   const [error, setError] = useState("");
 
 
-  function inputValidate() {
+  function validate() {
     if (name === "") {
       setError("Student name cannot be blank");
       return;
@@ -46,7 +46,7 @@ function Form(props) {
       <section className="appointment__card-right">
         <section className="appointment__actions">
           <Button danger onClick={reset}>Cancel</Button>
-          <Button confirm onClick={inputValidate}>Save</Button>
+          <Button confirm onClick={validate}>Save</Button>
         </section>
       </section>
     </main>
