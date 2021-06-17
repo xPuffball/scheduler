@@ -27,19 +27,19 @@ The Page Displays:
 
 <b>Booking an Interview</b>
 
-!["Screenshot of booking an interview"]()
+!["Screenshot Booking Interview"](https://github.com/xPuffball/scheduler/blob/master/docs/screenshot_create.png)
 
 <b>And After</b>
 
-!["Screenshot of booking an interview"]()
+!["Screenshot After Booking"](https://github.com/xPuffball/scheduler/blob/master/docs/screenshot_created.png)
 
 <b>Cancelling an Interview</b>
 
-!["Screenshot of cancelling an interview"]()
+!["Screenshot of Deleting an Interview"](https://github.com/xPuffball/scheduler/blob/master/docs/screenshot_delete.png)
 
-<b>Many Interviews</b>
+<b>Viewing Booked Interviews</b>
 
-!["Screenshot of many booked interviews"]()
+!["Screenshot of Booked Interviews"](https://github.com/xPuffball/scheduler/blob/master/docs/screenshot_appointments.png)
 
 ## Setup
 
