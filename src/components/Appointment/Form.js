@@ -7,7 +7,6 @@ function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
-
   function validate() {
     if (name === "") {
       setError("Student name cannot be blank");

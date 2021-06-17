@@ -1,5 +1,4 @@
 import React from "react";
-import "components/Appointment/styles.scss";
 import Header from "components/Appointment/Header"
 import Show from "components/Appointment/Show"
 import Empty from "components/Appointment/Empty"
@@ -9,7 +8,9 @@ import Confirm from "components/Appointment/Confirm"
 import Error from "components/Appointment/Error"
 import useVisualMode from "../../hooks/useVisualMode"
 
-export default function Appointment(props) {
+import "components/Appointment/styles.scss";
+
+function Appointment(props) {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE  = "CREATE"; 
@@ -35,7 +36,7 @@ export default function Appointment(props) {
       .catch(() => transition(ERROR_SAVE, true))
   }
 
-  const destroy = () => {
+  const deleteInterview = () => {
     transition(DELETING, true);
     props.cancelInterview(props.id)
       .then(() => transition(EMPTY))
@@ -61,7 +62,7 @@ export default function Appointment(props) {
         {mode === DELETING && <Status message={DELETING} />}
         {mode === ERROR_DELETE && <Error message={ERROR_DELETE} onClose={back} />}
         {mode === CONFIRM && (
-          <Confirm onConfirm={destroy} onCancel={back} message="Are you sure you want to delete?" />
+          <Confirm onConfirm={deleteInterview} onCancel={back} message="Are you sure you want to delete this interview?" />
         )}
         {mode === EDIT && (
           <Form 
@@ -75,3 +76,5 @@ export default function Appointment(props) {
     </article>
   );
 }
+
+export default Appointment;
